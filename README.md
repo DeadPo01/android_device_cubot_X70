@@ -10,6 +10,8 @@ Specs [here](https://www.gsmarena.com/cubot_x70-12305.php)
 Description | Specification
 -------:|:-------------------------
 Shipped Android Version | 13
+CPU | MediaTek Helio G99 (MT6789)
+RAM | 12 GB (expandable to 24 GB)
 Internal Storage | 256 GB (UFS 2.1)
 Display | 6.58 inches, 60/120 hz
 Resolution | 1080 x 2408 pixels, 20:9 ratio (~401 ppi density)
