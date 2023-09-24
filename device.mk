@@ -9,8 +9,8 @@ LOCAL_PATH := device/cubot/X70
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # API
-PRODUCT_SHIPPING_API_LEVEL := 31
-PRODUCT_TARGET_VNDK_VERSION := 31
+PRODUCT_SHIPPING_API_LEVEL := 32
+PRODUCT_TARGET_VNDK_VERSION := 32
 
 # A/B
 AB_OTA_UPDATER := true
@@ -64,6 +64,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctrl
 
+PRODUCT_PACKAGES += \
+    bootctrl \
+    bootctrl.recovery \
+    libmtk_bsg
+
 # Drm
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4
@@ -72,6 +77,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
+
+# Mtk plpath utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils \
+    mtk_plpath_utils.recovery
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -86,11 +101,6 @@ PRODUCT_PACKAGES += \
 # Keystore2
 PRODUCT_PACKAGES += \
     android.system.keystore2
-
-# Mtk plpath utils
-PRODUCT_PACKAGES += \
-    mtk_plpath_utils \
-    mtk_plpath_utils.recovery
 
 # Hide Reflash TWRP
 PRODUCT_PROPERTY_OVERRIDES += ro.twrp.vendor_boot=true
