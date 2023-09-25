@@ -12,11 +12,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_SHIPPING_API_LEVEL := 32
 PRODUCT_TARGET_VNDK_VERSION := 32
 
+
 # A/B
 AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
-    boot \
     vendor_boot \
     dtbo \
     system \
@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     update_engine \
     update_engine_sideload \
-    update_verifier \
+    update_verifier
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
